@@ -82,7 +82,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
             >
               Ver Meus Projetos
@@ -90,7 +90,7 @@ export default function HomePage() {
             <Button
               variant="outline"
               size="lg"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 bg-transparent"
+              className="border-blue-600 cursor-pointer text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 bg-transparent"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Entrar em Contato
@@ -98,28 +98,27 @@ export default function HomePage() {
           </div>
 
           <div className="flex justify-center gap-6 pt-8">
-            <a
-              href="https://linkedin.com/in/gabriel-lopes-968b111a5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="https://github.com/GabrielLS88"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="mailto:lopes.biel2588@gmail.com"
-              className="text-muted-foreground hover:text-blue-600 transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Mail size={24} />
-            </a>
+            <Tooltip>
+              <TooltipTrigger className="mr-3">
+                <Link href="https://linkedin.com/in/gabriel-lopes-968b111a5" rel="noopener noreferrer" target="_blank" className={`text-muted-foreground hover:text-blue-600 transition-colors duration-300 transform`}><Linkedin className="hover:scale-110" size={24} /></Link>
+              </TooltipTrigger>
+              <TooltipContent>LinkedIn</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger className="mr-3">
+                <Link href="https://github.com/GabrielLS88" rel="noopener noreferrer" target="_blank" className={`text-muted-foreground hover:text-blue-600 transition-colors duration-300 transform`}><Github className="hover:scale-110" size={24} /></Link>
+              </TooltipTrigger>
+              <TooltipContent>Github</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger className="mr-3">
+                <Link href="mailto:lopes.biel2588@gmail.com" rel="noopener noreferrer" target="_blank" className={`text-muted-foreground hover:text-blue-600 transition-colors duration-300 transform`}><Mail className="hover:scale-110" size={24} /></Link>
+              </TooltipTrigger>
+              <TooltipContent>Enviar e-mail</TooltipContent>
+            </Tooltip>
+
           </div>
         </div>
       </section>
@@ -302,13 +301,13 @@ export default function HomePage() {
                     <h3 className="text-xl font-semibold text-foreground">Back end com Java</h3>
                     <Tooltip>
                       <TooltipTrigger className="mr-3">
-                        <Link href="https://github.com/GabrielLS88/back_end_java" className={`hover:text-blue-800`}><Github /> Repositório</Link>
+                        <Link href="https://github.com/GabrielLS88/back_end_java" rel="noopener noreferrer" target="_blank" className={`hover:text-blue-800 flex flex-col items-center`}><Github /></Link>
                       </TooltipTrigger>
                       <TooltipContent>Abrir projeto</TooltipContent>
                     </Tooltip>
                   </div>
                   <p className="text-muted-foreground">
-                    Desenvolvimento de um back-end completo para um sistema de gerenciamento, implementando operações CRUD e autenticação JWT, utilizando Java, Spring Boot, JPA, Spring Security e MySQL para banco de dados.
+                    O projeto consiste no desenvolvimento de um back-end completo para um sistema de gerenciamento, no qual foram implementadas operações CRUD e autenticação baseada em JWT. A solução foi desenvolvida em Java utilizando o framework Spring Boot, com o suporte do JPA para o mapeamento objeto-relacional, Spring Security para a camada de segurança e o banco de dados MySQL para o armazenamento e a persistência das informações.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline" className="text-xs">
@@ -338,13 +337,13 @@ export default function HomePage() {
                     <h3 className="text-xl font-semibold text-foreground">Back end em Python</h3>
                     <Tooltip>
                       <TooltipTrigger className="mr-3">
-                        <Link href="https://github.com/GabrielLS88/back_end_python" className={`hover:text-blue-800`}><Github /> Repositório</Link>
+                        <Link href="https://github.com/GabrielLS88/back_end_python" rel="noopener noreferrer" target="_blank" className={`hover:text-blue-800 flex flex-col items-center`}><Github /></Link>
                       </TooltipTrigger>
                       <TooltipContent>Abrir projeto</TooltipContent>
                     </Tooltip>
                   </div>
                   <p className="text-muted-foreground">
-                    Nesse projeto fiz um back end para um sistema de gestão com SQLite e Flask para entregar consultas para o front end no modelo RESTfull.
+                    Este projeto consistiu no desenvolvimento do back-end de um sistema de gestão, implementado com SQLite e Flask, tendo como principal finalidade disponibilizar consultas e operações ao front-end por meio de uma arquitetura RESTful. A solução foi projetada para assegurar simplicidade na integração, eficiência no processamento de dados e escalabilidade no suporte às funcionalidades do sistema.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline" className="text-xs">
@@ -368,13 +367,13 @@ export default function HomePage() {
                     <h3 className="text-xl font-semibold text-foreground">Front end em Next.JS</h3>
                     <Tooltip>
                       <TooltipTrigger className="mr-3">
-                        <Link href="https://github.com/GabrielLS88/gabriel-portfolio" className={`hover:text-blue-800`}><Github /> Repositório</Link>
+                        <Link href="https://github.com/GabrielLS88/gabriel-portfolio" rel="noopener noreferrer" target="_blank" className={`hover:text-blue-800 flex flex-col items-center`}><Github /></Link>
                       </TooltipTrigger>
                       <TooltipContent>Abrir projeto</TooltipContent>
                     </Tooltip>
                   </div>
                   <p className="text-muted-foreground">
-                    Nesse projeto apresento a estrutura do meu portifolio atual que modelei com next js e esta hospedado atualmente em um container na vercel.
+                    O presente projeto tem como objetivo demonstrar a estrutura do meu portfólio, desenvolvido com o framework Next.js e atualmente implantado em um container hospedado na plataforma Vercel.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline" className="text-xs">
@@ -385,6 +384,9 @@ export default function HomePage() {
                     </Badge>
                     <Badge variant="outline" className="text-xs">
                       Shadcn
+                    </Badge>
+                    <Badge variant="outline" className="text-xs">
+                      Vercel
                     </Badge>
                   </div>
                 </div>
@@ -431,13 +433,13 @@ export default function HomePage() {
                       PostgreSQL
                     </Badge>
                     <Badge variant="outline" className="text-xs">
-                     API Rest Full
+                      API Rest Full
                     </Badge>
                     <Badge variant="outline" className="text-xs">
-                     Scrum
+                      Scrum
                     </Badge>
                     <Badge variant="outline" className="text-xs">
-                     Kanban
+                      Kanban
                     </Badge>
                     <Badge variant="outline" className="text-xs">
                       Blip
@@ -468,7 +470,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+              className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
               onClick={() => window.open("mailto:lopes.biel2588@gmail.com", "_blank")}
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -477,7 +479,7 @@ export default function HomePage() {
             <Button
               variant="outline"
               size="lg"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 bg-transparent"
+              className="border-blue-600 cursor-pointer text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 bg-transparent"
               onClick={() => window.open("https://linkedin.com/in/gabriel-lopes-968b111a5", "_blank")}
             >
               <Linkedin className="w-5 h-5 mr-2" />
