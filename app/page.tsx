@@ -302,7 +302,7 @@ export default function HomePage() {
                     <h3 className="text-xl font-semibold text-foreground">Back end com Java</h3>
                     <Tooltip>
                       <TooltipTrigger className="mr-3">
-                        <Link href="https://github.com/GabrielLS88/back_end_java" className={`hover:text-blue-800`}><Github /></Link>
+                        <Link href="https://github.com/GabrielLS88/back_end_java" className={`hover:text-blue-800`}><Github /> Repositório</Link>
                       </TooltipTrigger>
                       <TooltipContent>Abrir projeto</TooltipContent>
                     </Tooltip>
@@ -336,7 +336,12 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-semibold text-foreground">Back end em Python</h3>
-                    <a rel="stylesheet" className="hover:text-blue-800" href="https://github.com/GabrielLS88/back_end_python"><Github /></a>
+                    <Tooltip>
+                      <TooltipTrigger className="mr-3">
+                        <Link href="https://github.com/GabrielLS88/back_end_python" className={`hover:text-blue-800`}><Github /> Repositório</Link>
+                      </TooltipTrigger>
+                      <TooltipContent>Abrir projeto</TooltipContent>
+                    </Tooltip>
                   </div>
                   <p className="text-muted-foreground">
                     Nesse projeto fiz um back end para um sistema de gestão com SQLite e Flask para entregar consultas para o front end no modelo RESTfull.
@@ -360,18 +365,26 @@ export default function HomePage() {
               <CardContent className="p-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-semibold text-foreground">CRUD Front end</h3>
-                    <a rel="stylesheet" className="hover:text-blue-800" href="https://github.dev/GabrielLS88/Conek"><Github /></a>
+                    <h3 className="text-xl font-semibold text-foreground">Front end em Next.JS</h3>
+                    <Tooltip>
+                      <TooltipTrigger className="mr-3">
+                        <Link href="https://github.com/GabrielLS88/gabriel-portfolio" className={`hover:text-blue-800`}><Github /> Repositório</Link>
+                      </TooltipTrigger>
+                      <TooltipContent>Abrir projeto</TooltipContent>
+                    </Tooltip>
                   </div>
                   <p className="text-muted-foreground">
-                    Primeiro projeto criado com react e vite.
+                    Nesse projeto apresento a estrutura do meu portifolio atual que modelei com next js e esta hospedado atualmente em um container na vercel.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline" className="text-xs">
-                      React
+                      Next.JS
                     </Badge>
                     <Badge variant="outline" className="text-xs">
-                      Vite
+                      Tailwind css
+                    </Badge>
+                    <Badge variant="outline" className="text-xs">
+                      Shadcn
                     </Badge>
                   </div>
                 </div>
