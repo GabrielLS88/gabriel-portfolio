@@ -137,10 +137,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Meu nome é Gabriel Lopes, tenho 21 anos, resido e sou de Uberlândia/MG, atualmente cursando Bacharelado em Sistemas de Informação na Uniube com previsão de conclusão em 2026.
+                Meu nome é Gabriel Lopes, tenho 22 anos, resido e sou de Uberlândia/MG, atualmente cursando Bacharelado em Sistemas de Informação na Uniube com previsão de conclusão em 2027.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Atuo há 2 anos como desenvolvedor Full Stack, onde desenvolvi softwares com diversas funcionalidades para atender demandas de clientes. Nesse período, trabalhei na criação de sistemas de disparo de mensagens ativas para empresas parceiras da Blip, desenvolvi APIs para integração de chatbots com outros sistemas e bancos de dados, além de implementar recursos que não eram nativamente suportados pela plataforma. Também fui responsável pela construção de alguns chatbots diretamente na Blip.
+                Atuo há 3 anos como desenvolvedor Full Stack, onde desenvolvi softwares com diversas funcionalidades para atender demandas de clientes. Nesse período, trabalhei na criação de sistemas de disparo de mensagens ativas para empresas parceiras da Blip, desenvolvi APIs para integração de chatbots com outros sistemas e bancos de dados, além de implementar recursos que não eram nativamente suportados pela plataforma. Também fui responsável pela construção de alguns chatbots diretamente na Blip.
               </p>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone size={16} />
