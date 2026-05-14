@@ -406,44 +406,107 @@ export default function HomePage() {
             Experiências Profissionais
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-            <Card className="col-span-full max-w-md mx-auto group glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {/* ColmeIA — destaque full width */}
+            <Card className="col-span-full max-w-2xl mx-auto group glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-primary/30">
               <CardContent className="p-6">
                 <div className="space-y-4">
-                  <div className="flex items-start justify-between flex-col">
-                    <h3 className="text-xl font-semibold text-foreground">Telek Sistema</h3>
-                    <p className="font-light text-xl">
-                      Desenvolvedor de softwares
-                    </p>
+                  <div className="flex items-start justify-between flex-wrap gap-2">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-xl font-semibold text-foreground">ColmeIA</h3>
+                        <Badge className="text-xs bg-primary/20 text-primary border-primary/30">Atual</Badge>
+                      </div>
+                      <p className="font-light text-lg">Analista de Implementação</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground">Out 2025 – Presente · São Paulo (Remoto)</span>
                   </div>
                   <p className="text-muted-foreground">
-                    Atuo há 2 anos como desenvolvedor Full Stack, onde desenvolvi softwares com diversas funcionalidades para atender demandas de clientes. Nesse período, trabalhei na criação de sistemas de disparo de mensagens ativas para empresas parceiras da Blip, desenvolvi APIs para integração de chatbots com outros sistemas e bancos de dados, além de implementar recursos que não eram nativamente suportados pela plataforma. Também fui responsável pela construção de alguns chatbots diretamente na Blip.
+                    Atuo no desenvolvimento e manutenção de aplicações de software com foco em Node.js e TypeScript,
+                    implementando APIs RESTful e modelando bancos de dados. Contribuo na definição da arquitetura do
+                    software e em soluções que envolvem <strong>Agentes de Inteligência Artificial</strong> e automação inteligente de processos.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="text-xs">
-                      React
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      Node JS
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      MySQL
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      PostgreSQL
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      API Rest Full
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      Scrum
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      Kanban
-                    </Badge>
-                    <Badge variant="outline" className="text-xs">
-                      Blip
-                    </Badge>
+                    {["Node.js", "TypeScript", "API RESTful", "Banco de Dados", "Agentes de IA", "Arquitetura de Software"].map(tag => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Telek Full-Stack */}
+            <Card className="md:col-span-2 group glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start justify-between flex-wrap gap-2">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">Telek Sistema</h3>
+                      <p className="font-light text-lg">Desenvolvedor Full-Stack</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground">Jan 2025 – Out 2025 · Uberlândia, MG</span>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Desenvolvimento e manutenção de aplicações web completas com foco em Front-End (Next.js, TypeScript, React)
+                    e Back-End (Node.js, Python). Criação e otimização de APIs RESTful, integração com a
+                    <strong> WhatsApp API (Meta)</strong>, trabalho com sistemas envolvendo <strong>Agentes de IA</strong>,
+                    containerização com Docker, versionamento com Git e gerenciamento de bancos de dados relacionais.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Next.js", "React", "TypeScript", "Node.js", "Python", "PostgreSQL", "MySQL", "Docker", "WhatsApp API", "Agentes de IA", "Git"].map(tag => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Telek Chatbot */}
+            <Card className="group glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start justify-between flex-wrap gap-2">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">Telek Sistema</h3>
+                      <p className="font-light text-lg">Desenvolvedor Back-End / Chatbot</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground">Dez 2023 – Jan 2025 · Uberlândia, MG</span>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Desenvolvimento de chatbots para clientes corporativos na plataforma Blip com Node.js.
+                    Integrações com Sankhya ERP, RD Station e WhatsApp API (Meta). Construção de APIs REST
+                    com arquitetura MVC e bancos de dados relacionais. Atuação em projetos com automação via IA e agentes conversacionais.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Node.js", "Blip", "API RESTful", "MVC", "Sankhya", "RD Station", "MySQL", "WhatsApp API"].map(tag => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Estágio */}
+            <Card className="group glass-effect hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start justify-between flex-wrap gap-2">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">Telek Sistema</h3>
+                      <p className="font-light text-lg">Estagiário em Desenvolvimento</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground">Out 2023 – Dez 2023 · Uberlândia, MG</span>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Início da jornada profissional desenvolvendo chatbots com a plataforma Blip e Node.js.
+                    Primeiras integrações com sistemas da Blip e APIs de terceiros, consolidando a base em
+                    desenvolvimento Back-End e automação de atendimento.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Node.js", "Blip", "Chatbot", "Integrações", "JavaScript"].map(tag => (
+                      <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                    ))}
                   </div>
                 </div>
               </CardContent>
